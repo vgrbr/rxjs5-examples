@@ -1,0 +1,13 @@
+#dragTarget {
+    background-image: url(https://github.com/JSSarajevo/assets/raw/master/logo/JSSarajevo-logo-128.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #666666;
+    color: #000;
+    padding: 10px;
+    position: absolute;
+    cursor: move;
+}

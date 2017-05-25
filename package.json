@@ -1,0 +1,20 @@
+{
+  "name": "rxjs-talk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "autocomplete.js",
+  "scripts": {
+    "start-search": "./node_modules/.bin/webpack-dev-server search --content-base search/",
+    "start-dd": "./node_modules/.bin/webpack-dev-server draganddrop --content-base draganddrop/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.4.0"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
