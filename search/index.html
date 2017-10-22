@@ -2,6 +2,44 @@
   <head>
     <title>RxJS GitHub search demo</title>
   </head>
+  <style>
+    #results ol {
+      list-style-type: none;
+      margin: 0;
+      margin-left: 50px;
+      padding: 0;
+      counter-reset: li-counter;
+    }
+    #results ol > li {
+      margin-top: 15px;
+      position: relative;
+      padding-left: 20px;
+      font-size: 30px;
+    }
+    #results ol > li:before {
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
+      line-height: 0.94;
+      text-align: center;
+      color: #f5f5f5;
+      background-color: #464646;
+      content: counter(li-counter);
+      counter-increment: li-counter;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+    }
+    #input {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+  </style>
   <body>
     <input type="text" id="input" name="input" placeholder="Enter text..." />
     <div id="results">No results</div>
