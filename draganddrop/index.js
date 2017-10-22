@@ -9,16 +9,16 @@ const mousedrag$ = mousedown$.flatMap((md) => {
   const startX = md.offsetX
   const startY = md.offsetY
 
-  return mousemove$.map((mm) => {
-    mm.preventDefault()
+  return mousemove$.map((e) => {
+    e.preventDefault()
     return {
-      left: mm.clientX - startX,
-      top: mm.clientY - startY
+      left: e.clientX - startX,
+      top: e.clientY - startY
     }
   }).takeUntil(mouseup$)
 })
 
 const subscription = mousedrag$.subscribe((pos) => {
-  dragTarget.style.top = pos.top + 'px'
-  dragTarget.style.left = pos.left + 'px'
+  $dragTarget.style.top = pos.top + 'px'
+  $dragTarget.style.left = pos.left + 'px'
 })
